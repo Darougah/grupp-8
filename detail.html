@@ -6,28 +6,32 @@
     <title>Detail</title>
 </head>
 <body>
-    
-    <form>
-        <label for="fname">Name</label>
-        <input type="text" id="fname" name="fname">
+    <h1> My Profile</h1>
+    <hr> 
 
-        <label for="fname">Lastname</label>
-        <input type="text" id="fname" name="fname">
+    <div>
+        <form action="/action_page.php">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          
+          <label for="fname">Email</label>
+          <input type="text" id="email" name="email" placeholder="insert email">
+      
+          <label for="lname">Age</label>
+          <input type="text" id="age" name="age" placeholder="Your age..">
 
-        <label for="fname">Email</label>
-        <input type="text" id="fname" name="fname">
-
-        <label for="fname">Age</label>
-        <input type="text" id="fname" name="fname">
-
-        <label for="fname">About me</label>
-        <input type="text" id="fname" name="fname">
-
-        <label for="fname">Gender</label>
-        <input type="text" id="fname" name="fname">
-
-<button> Submit</button>
+          <label for="fname">About me</label>
+          <input type="text" id="aboutme" name="aboutme" placeholder="Write little about you..">
+            
+          <label for="lname">Gender</label>
+          <input type="text" id="gender" name="gender" placeholder="Gender">
+       
+          <input type="submit" value="Submit">
       </form>
+    </div>
 
 </body>
 </html>
