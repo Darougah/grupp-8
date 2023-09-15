@@ -1,9 +1,67 @@
-.header {
-  color: #E81B1B;
-  border: 2px solid black;
-  
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+.formclass{
+  margin: 10px;
+  padding: 20px;
+  border-radius:10px;
+ 
 }
 
-.form {
-    
+.message {
+  resize: none;
+  width: auto;
+  height: 150px;}
+
+  .submit {
+    background: rgba(6, 97, 6, 0.89);
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #eee;
+    text-shadow: none;
+    width: 20em;  
+    height: 2em;
+  }
+
+  .submit:hover {
+    background: rgba(6, 97, 6, 0.89);
+    color: black;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px #eee;
+    text-shadow: none;
+  }
+
+  .border-customized-input {
+    border: 2px solid #eee;
+    padding: 50px;
+    margin: 50px;
+    border:0;
+    box-shadow:0 0 0px 2px rgba(0,0,0,0.06);
+  }
+
+  .texttype {
+    background-color: lightgray;
+    border: none;
+  }
+
+
+/* .column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+ 
 }
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+ */

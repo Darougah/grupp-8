@@ -3,31 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Detail</title>
 </head>
 <body>
+    <h1> My Profile</h1>
+    <hr> 
+
     
-    <form>
-        <label for="fname">Name</label>
-        <input type="text" id="fname" name="fname">
-
-        <label for="fname">Lastname</label>
-        <input type="text" id="fname" name="fname">
-
-        <label for="fname">Email</label>
-        <input type="text" id="fname" name="fname">
-
-        <label for="fname">Age</label>
-        <input type="text" id="fname" name="fname">
-
-        <label for="fname">About me</label>
-        <input type="text" id="fname" name="fname">
-
-        <label for="fname">Gender</label>
-        <input type="text" id="fname" name="fname">
-
-<button> Submit</button>
+        <form class="formtype">
+        <section class ="border-customized-input">
+        <div class="row">
+        <div class="column">            
+          <p><label for="fname">Name</label></p>
+          <div><input class= "texttype" type="text" id="fname" name="firstname" placeholder="Your name.."></div>
+      
+          <p><label for="lname">Last Name</label></p>
+          <div><input class= "texttype" type="text" id="lname" name="lastname" placeholder="Your last name.."></div>
+          
+          <p><label for="fname">Email</label></p>
+          <div><input class= "texttype" type="text" id="email" name="email" placeholder="insert email"></div>
+      
+          <p><label for="age">Age</label></p>
+          <div><input class= "texttype" type="number" id="age" name="age" placeholder="Your age.."></div>
+        </div>
+     
+        <div class="column">
+          <p><label for="message">About me </label></p>
+          <textarea class= "texttype"></textarea>
+            
+          <p><label for="lname">Gender</label></p>
+          <input class= "texttype" type="text" id="gender" name="gender" placeholder="Gender">
+       
+        
+          <div><button class="submit">Submit</button></div>
+       </div>
+    </div>
+        
+        </section>
       </form>
+   
 
 </body>
 </html>
