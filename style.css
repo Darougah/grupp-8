@@ -1,67 +1,73 @@
+/* @media only screen and (max-width: 900px) {} */
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  }
-
-.formclass{
-  margin: 10px;
-  padding: 20px;
-  border-radius:10px;
- 
 }
 
-.message {
-  resize: none;
-  width: auto;
-  height: 150px;}
+.rubrik {
+  justify-content: center;
+  text-align: center;
+}
 
-  .submit {
-    background: rgba(6, 97, 6, 0.89);
-    color: #fff;
-    border: 1px solid #eee;
-    border-radius: 20px;
-    box-shadow: 5px 5px 5px #eee;
-    text-shadow: none;
-    width: 20em;  
-    height: 2em;
-  }
+.formplace {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: 20px 20px 20px 20px;
+}
 
-  .submit:hover {
-    background: rgba(6, 97, 6, 0.89);
-    color: black;
-    border: 1px solid #eee;
-    border-radius: 20px;
-    box-shadow: 5px 5px 5px #eee;
-    text-shadow: none;
-  }
+.formplace label {
+  margin: 5px 10px 5px 0;
+  font-weight: bolder
 
-  .border-customized-input {
-    border: 2px solid #eee;
-    padding: 50px;
-    margin: 50px;
-    border:0;
-    box-shadow:0 0 0px 2px rgba(0,0,0,0.06);
-  }
+}
 
-  .texttype {
-    background-color: lightgray;
-    border: none;
-  }
-
-
-/* .column {
-  float: left;
-  width: 50%;
+.formplace input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
   padding: 10px;
- 
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 1.4rem;
+  background-color: lightgray;
+  font-weight: bolder
+}
+
+.formplace button {
+  padding: 10px 10rem;
+  background-color: rgb(5, 95, 5);
+  border: 1px solid #ddd;
+  color: white;
+  cursor: pointer;
+  border-radius: 1.4rem;
+}
+
+.formplace button:hover {
+  background-color: rgba(5, 95, 5, 0.534);
+}
+
+.formplace textarea{
+  background-color: lightgray;
+  border: 1px;
+  border-radius: 1.4rem;
 }
 
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+
+
+
+
+
+@media (max-width: 800px) {
+  .formplace input {
+    margin: 10px 0;
+  }
+
+  .formplace {
+    flex-direction: column;
+    align-items: stretch;
+  }
 }
- */
+
