@@ -7,20 +7,35 @@
 }
 
 .rubrik {
-  justify-content: center;
+
   text-align: center;
 }
 
+hr{
+  width: 50%;
+  background-color: darkgray;
+  height: 3px;
+  margin: auto;
+}
+
+body{
+
+}
 .formplace {
   display: flex;
   flex-flow: column;
   align-items: center;
-  margin: 20px 20px 20px 20px;
+  margin: auto;
+  margin-top: 40px;
+ width: fit-content;
+  border: solid lightgray 2px;
+ padding: 2rem;
+
 }
 
 .formplace label {
   margin: 5px 10px 5px 0;
-  font-weight: bolder
+  font-weight: bolder;
 
 }
 
@@ -48,12 +63,11 @@
   background-color: rgba(5, 95, 5, 0.534);
 }
 
-.formplace textarea{
+.formplace textarea {
   background-color: lightgray;
   border: 1px;
   border-radius: 1.4rem;
 }
-
 
 
 
@@ -70,4 +84,3 @@
     align-items: stretch;
   }
 }
-
