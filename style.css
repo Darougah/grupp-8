@@ -54,70 +54,82 @@
 
 
 
-body{ text-align: center;}
-.headercenter
-{
+  .rubrik {
+
     text-align: center;
-    justify-content: center;
-}
-  .formclass{
-    margin: 10px;
-    padding: 20px;
-    border-radius:10px;
-   
   }
   
-  .message {
-    resize: none;
-    width: auto;
-    height: 150px;}
+  hr{
+    width: 20%;
+    background-color: darkgray;
+    height: 3px;
+    margin: auto;
+  }
   
-    .submit {
-      background: rgba(6, 97, 6, 0.89);
-      color: #fff;
-      border: 1px solid #eee;
-      border-radius: 20px;
-      box-shadow: 5px 5px 5px #eee;
-      text-shadow: none;
-      width: 20em;  
-      height: 2em;
-    }
+  body{
   
-    .submit:hover {
-      background: rgba(6, 97, 6, 0.89);
-      color: black;
-      border: 1px solid #eee;
-      border-radius: 20px;
-      box-shadow: 5px 5px 5px #eee;
-      text-shadow: none;
-    }
+  }
+  .formplace {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: auto;
+    margin-top: 40px;
+   width: fit-content;
+    border: solid lightgray 2px;
+   padding: 2rem;
   
-    .border-customized-input {
-      border: 2px solid #eee;
-      padding: 50px;
-      margin: 50px;
-      border:0;
-      box-shadow:0 0 0px 2px rgba(0,0,0,0.06);
-    }
+  }
   
-    .texttype {
-      background-color: lightgray;
-      border: none;
-    }
+  .formplace label {
+    margin: 5px 10px 5px 0;
+    font-weight: bolder;
   
+  }
   
-  /* .column {
-    float: left;
-    width: 50%;
+  .formplace input {
+    vertical-align: middle;
+    margin: 5px 10px 5px 0;
     padding: 10px;
-   
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 1.4rem;
+    background-color: lightgray;
+    font-weight: bolder
+  }
+  
+  .formplace button {
+    padding: 10px 10rem;
+    background-color: rgb(5, 95, 5);
+    border: 1px solid #ddd;
+    color: white;
+    cursor: pointer;
+    border-radius: 1.4rem;
+  }
+  
+  .formplace button:hover {
+    background-color: rgba(5, 95, 5, 0.534);
+  }
+  
+  .formplace textarea {
+    background-color: lightgray;
+    border: 1px;
+    border-radius: 1.4rem;
   }
   
   
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
+  
+  
+  
+  
+  @media (max-width: 800px) {
+    .formplace input {
+      margin: 10px 0;
+    }
+  
+    .formplace {
+      flex-direction: column;
+      align-items: stretch;
+    }
   }
-   */
   
