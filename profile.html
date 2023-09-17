@@ -1,11 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Detail</title>
 </head>
+<h1 class="rubrik">My profile</h1>
+<hr class="linje">
+
 <body>
-    
+
+  <form class="formplace">
+   
+    <div class="row">
+      <div class="column">
+        <div><label for="fname">Name</label></div>
+        <div><input type="text" id="fname" name="firstname" placeholder="Your name.."></div>
+
+        <div><label for="lname">Last Name</label></div>
+        <div><input type="text" id="lname" name="lastname" placeholder="Your last name.."></div>
+
+        <div><label for="email">Email:</label></div>
+        <div><input type="email" id="email" placeholder="Enter email" name="email"></div>
+
+        <div><label for="age">Age</label></div>
+        <div><input type="number" id="age" name="age" placeholder="Your age.."></div>  
+      </div>
+
+      <div class="column">
+        <div><label for="message">About me </label></div>
+        <div><textarea id="message" name="message" rows="10" cols="30" style="resize:none"></textarea></div>
+
+        <div><label for="lname">Gender</label></div>
+        <div><input type="text" id="gender" name="gender" placeholder="Gender"></div>    
+
+        <div><button type="submit">Submit</button></div>
+      </div>
+
+  </form>
+
 </body>
+
 </html>
