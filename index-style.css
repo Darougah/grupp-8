@@ -94,7 +94,7 @@ h3 {
     border: 1px solid rgb(197, 192, 192);
     background-color: white;
 
-    position: absolute;
+    position: fixed;
     bottom: 0;
     height: 50px;
     width: 1600px;
@@ -157,7 +157,7 @@ h3 {
 /*  Images and logos  */
 
 .main-image1 {
-    background-image: url(/pictures/angello-pro-_Ry9wj57UvY-unsplash.jpg);
+    background-image: url(./pictures/rodolfo-marques-VXdFTakRmDI-unsplash.jpg);
     background-size: cover;
 }
 .main-image2 {
@@ -169,7 +169,7 @@ h3 {
     background-size: cover;
 }
 .main-image4 {
-    background-image: url(/pictures/rodolfo-marques-VXdFTakRmDI-unsplash.jpg);
+    background-image: url(./pictures/sebastian-coman-photography-QcerUj-jYig-unsplash.jpg);
     background-size: cover;
 }
 
@@ -210,8 +210,8 @@ h3 {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 50px 350px 350px 50px;
         gap: 1rem;
-        padding-left: 200px;
-        padding-right: 200px;
+        padding-left: 150px;
+        padding-right: 150px;
     }
 
     .image-header{
