@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Detail</title>
 </head>
+<h1 class="rubrik">My profile</h1>
+<hr class="linje">
+
 <body>
-    
-    <form>
-        <label for="fname">Name</label>
-        <input type="text" id="fname" name="fname">
 
-        <label for="fname">Lastname</label>
-        <input type="text" id="fname" name="fname">
+  <form class="formplace">
 
-        <label for="fname">Email</label>
-        <input type="text" id="fname" name="fname">
+    <label for="fname">Name</label>
+    <input class="texttype" type="text" id="fname" name="firstname" placeholder="Your name..">
 
-        <label for="fname">Age</label>
-        <input type="text" id="fname" name="fname">
+    <label for="lname">Last Name</label>
+    <input class="texttype" type="text" id="lname" name="lastname" placeholder="Your last name..">
 
-        <label for="fname">About me</label>
-        <input type="text" id="fname" name="fname">
+    <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Enter email" name="email">
 
-        <label for="fname">Gender</label>
-        <input type="text" id="fname" name="fname">
+    <label for="age">Age</label>
+    <input class="texttype" type="number" id="age" name="age" placeholder="Your age..">
 
-<button> Submit</button>
-      </form>
+    <label for="message">About me </label>
+    <textarea id="message" name="message" rows="10" cols="50" style="resize:none" class="texttype"></textarea>
+
+    <label for="lname">Gender</label>
+    <input class="texttype" type="text" id="gender" name="gender" placeholder="Gender">
+ 
+
+    <button type="submit">Submit</button>
+  </form>
 
 </body>
+
 </html>
