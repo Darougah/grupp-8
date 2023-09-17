@@ -13,27 +13,33 @@
 <body>
 
   <form class="formplace">
+   
+    <div class="row">
+      <div class="column">
+        <div><label for="fname">Name</label></div>
+        <div><input type="text" id="fname" name="firstname" placeholder="Your name.." required></div>
 
-    <label for="fname">Name</label>
-    <input class="texttype" type="text" id="fname" name="firstname" placeholder="Your name..">
+        <div><label for="lname">Lastname</label></div>
+        <div><input type="text" id="lname" name="lastname" placeholder="Your last name.." required></div>
 
-    <label for="lname">Last Name</label>
-    <input class="texttype" type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <div><label for="email">Email</label></div>
+        <div><input type="email" id="email" placeholder="Enter email" name="email" pattern=".+@*.com" required></div>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" placeholder="Enter email" name="email">
+        <div><label for="age">Age</label></div>
+        <div><input type="number" id="age" name="age" placeholder="Your age.." required></div>  
+      </div>
 
-    <label for="age">Age</label>
-    <input class="texttype" type="number" id="age" name="age" placeholder="Your age..">
+      <div class="column">
+        <div><label for="message">About me </label></div>
+        <div><textarea id="message" name="message" rows="10" cols="25" style="resize:none"></textarea></div>
 
-    <label for="message">About me </label>
-    <textarea id="message" name="message" rows="10" cols="50" style="resize:none" class="texttype"></textarea>
+        <div><label for="lname">Gender</label></div>
+        <div><input type="text" id="gender" name="gender" placeholder="Gender"></div>    
 
-    <label for="lname">Gender</label>
-    <input class="texttype" type="text" id="gender" name="gender" placeholder="Gender">
- 
+        <div><button type="submit">Submit</button></div>
+      </div>
+    </div>
 
-    <button type="submit">Submit</button>
   </form>
 
 </body>
