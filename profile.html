@@ -17,27 +17,28 @@
     <div class="row">
       <div class="column">
         <div><label for="fname">Name</label></div>
-        <div><input type="text" id="fname" name="firstname" placeholder="Your name.."></div>
+        <div><input type="text" id="fname" name="firstname" placeholder="Your name.." required></div>
 
-        <div><label for="lname">Last Name</label></div>
-        <div><input type="text" id="lname" name="lastname" placeholder="Your last name.."></div>
+        <div><label for="lname">Lastname</label></div>
+        <div><input type="text" id="lname" name="lastname" placeholder="Your last name.." required></div>
 
-        <div><label for="email">Email:</label></div>
-        <div><input type="email" id="email" placeholder="Enter email" name="email"></div>
+        <div><label for="email">Email</label></div>
+        <div><input type="email" id="email" placeholder="Enter email" name="email" pattern=".+@*.com" required></div>
 
         <div><label for="age">Age</label></div>
-        <div><input type="number" id="age" name="age" placeholder="Your age.."></div>  
+        <div><input type="number" id="age" name="age" placeholder="Your age.." required></div>  
       </div>
 
       <div class="column">
         <div><label for="message">About me </label></div>
-        <div><textarea id="message" name="message" rows="10" cols="30" style="resize:none"></textarea></div>
+        <div><textarea id="message" name="message" rows="10" cols="25" style="resize:none"></textarea></div>
 
         <div><label for="lname">Gender</label></div>
         <div><input type="text" id="gender" name="gender" placeholder="Gender"></div>    
 
         <div><button type="submit">Submit</button></div>
       </div>
+    </div>
 
   </form>
 
