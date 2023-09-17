@@ -72,7 +72,7 @@ h3 {
     padding: 10px;
 }
 
-/* bottom nav */
+/* bottom nav mobile*/
 
 .bottom-nav {
     background-color: white;
@@ -86,6 +86,8 @@ h3 {
     justify-content: space-between;
 }
 
+ /* bottom nav big-screen*/
+ 
 .end {
     display: flex;
     align-items: center;
@@ -106,28 +108,17 @@ h3 {
 }
 
 .end nav ul li a{
-
     color: gray;
     font-family: raleway;
     font-size: 14px;
 }
-
-.end nav ul li p:last-child {
-    align-self: flex-end;
-}
-
 .end nav ul li a:hover {
     color: lightgray;
 }
-
 .end p{
-
     font-family: raleway;
     font-size: 12px;
     color: lightgrey;
-
-    display: flex;
-    margin-left: auto;
 }
 
 /*  Image header  */
