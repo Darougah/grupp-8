@@ -130,71 +130,7 @@ h3 {
     justify-content: space-between;
 }
 
-/*  Image header  */
-
-.image-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    font-family: raleway;
-    font-size: 12px;
-
-    gap: 1rem;
-    background-color: white;
-    height: 50px;
-    padding: 10px;
-}
-
-.image-header p{
-    padding-top: 10px;
-    color: black;
-}
-
-/* link on main-images */
-button {
-    margin-top: 200px;
-
-    width: 100%;
-    height: 50px;
-
-    background-color: rgb(44, 44, 44);
-    color: white;
-    
-    font-family: raleway;
-    font-weight: bold;
-}
-
-button:hover {
-    background-color: rgb(59, 58, 58);
-}
-
-.left {
-    display: flex;
-    gap: 1rem;
-}
-.right {
-   padding: 5px;
-}
-
 /*  Images and logos  */
-
-.main-image1 {
-    background-image: url(./pictures/rodolfo-marques-VXdFTakRmDI-unsplash.jpg);
-    background-size: cover;
-}
-.main-image2 {
-    background-image: url(/pictures/jasmine-huang-RSQmXaCUvn0-unsplash.jpg);
-    background-size: cover;
-}
-.main-image3 {
-    background-image: url(/pictures/lidiya-pavlikova-y_gKWLrw3N4-unsplash.jpg);
-    background-size: cover;
-}
-.main-image4 {
-    background-image: url(./pictures/sebastian-coman-photography-QcerUj-jYig-unsplash.jpg);
-    background-size: cover;
-}
 
 .main-header-logo{
     height: 30px;
@@ -216,7 +152,7 @@ button:hover {
 /*  Layout responsive  */
 
 @media (max-width: 800px) {
-    .side-nav-menu, h3, .menu-text, button, .mini-logo, .end{
+    .side-nav-menu, h3, .menu-text, .mini-logo, .end{
         display: none;
     }
     .container {
@@ -235,10 +171,6 @@ button:hover {
         gap: 1rem;
         padding-left: 150px;
         padding-right: 150px;
-    }
-
-    .image-header{
-        opacity: 0.8;
     }
 
     .main-header {
