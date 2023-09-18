@@ -3,9 +3,748 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Favorites</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>Favorites</title>   
+    
+    <style>@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Raleway:wght@300;400;700&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+        }
+        
+        /*  side nav-menu  */
+        .side-nav-menu{
+            float: left;
+        
+            width: 20%;
+            height: 100%;
+        }
+        .side-nav-menu ul{
+            display: flex;
+            flex-direction: column; 
+            gap: 2rem;
+        }
+        
+        .side-nav-menu ul li a{
+            display: flex;
+            align-items: center;
+            color: black;
+            font-family: raleway;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .side-nav-menu ul li a:hover{
+            color: grey;
+        }
+        
+        .nav-logo {
+            margin-top: 20px;
+            margin-left: 10px;
+            height: 25px;
+        }
+        
+        /* main container  */
+        
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 50px 400px 400px 400px 400px 50px;
+        
+            border: 5px solid gray;
+            float: right;
+        
+            
+            width: 80%;
+            height: 100%;
+        }
+        
+        .main-header {
+            background-color: white;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+        
+            display: flex;
+        
+        
+        }
+        
+        h3 {
+            font-family: raleway;
+            font-weight: bold;
+            padding: 10px;
+        }
+        
+        /* bottom nav */
+        
+        .bottom-nav {
+            background-color: white;
+        
+            position: sticky;
+            bottom: 0;
+        }
+        
+        .bottom-nav nav ul{
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .end {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+            border: 1px solid rgb(197, 192, 192);
+            background-color: white;
+            right: 0px;
+            position: absolute;
+            bottom: 0%;
+            ;
+            height: 16.5%;
+            width: 80%
+        }
+        
+        .end nav ul{
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .end nav ul li a{
+        
+            color: gray;
+            font-family: raleway;
+            font-size: 14px;
+        }
+        
+        .end nav ul li p:last-child {
+            align-self: flex-end;
+        }
+        
+        .end nav ul li a:hover {
+            color: lightgray;
+        }
+        
+        .end p{
+        
+            font-family: raleway;
+            font-size: 12px;
+            color: lightgrey;
+        
+            display: flex;
+            margin-left: auto;
+        }
+        
+        /*  Image header  */
+        
+        .image-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        
+            font-family: raleway;
+            font-size: 12px;
+        
+            gap: 1rem;
+            background-color: white;
+            height: 50px;
+            padding: 10px;
+        }
+        
+        .left {
+            display: flex;
+            gap: 1rem;
+        }
+        .right {
+           padding: 5px;
+        }
+        
+        /*  Images and logos  */
+        
+        .main-image1 {
+            background-image: url(/pictures/angello-pro-_Ry9wj57UvY-unsplash.jpg);
+            background-size: cover;
+        }
+        .main-image2 {
+            background-image: url(/pictures/jasmine-huang-RSQmXaCUvn0-unsplash.jpg);
+            background-size: cover;
+        }
+        .main-image3 {
+            background-image: url(/pictures/lidiya-pavlikova-y_gKWLrw3N4-unsplash.jpg);
+            background-size: cover;
+        }
+        .main-image4 {
+            background-image: url(/pictures/rodolfo-marques-VXdFTakRmDI-unsplash.jpg);
+            background-size: cover;
+        }
+        
+        .main-header-logo{
+            height: 30px;
+        }
+        .add-icon {
+            height: 25px;
+        }
+        
+        .prof, .nav-prof{
+            border-radius: 50%;
+            margin: 10px;
+        }
+        
+        .nav-icon, .nav-icon-side{
+            padding: 10px;
+        }
+        
+        
+        /*  Layout responsive  */
+        
+        @media (max-width: 800px) {
+            .side-nav-menu, h3, .menu-text, .mini-logo, .end{
+                display: none;
+            }
+            .container {
+                width: 100%;
+            }
+        }
+        
+        @media (min-width: 800px) {
+        
+            .main-header-logo, .add-icon, .bottom-nav, .nav-icon, .prof{
+                display: none;
+            }
+            .container {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 50px 350px 350px 50px;
+                gap: 1rem;
+                padding-left: 200px;
+                padding-right: 200px;
+            }
+        
+            .image-header{
+                opacity: 0.8;
+            }
+        
+            .main-header {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                border-bottom: 2px solid gray;
+            }
+        
+            .bottom-nav {
+                grid-column-start: 1;
+                grid-column-end: 3;
+               
+        
+            }
+            .side-nav-menu {
+                height: 100%;
+            }
+        }
+        
+        .thetable {
+            padding: 10px;
+            
+            width: 100%;
+            border-collapse: collapse;
+          }
+         table tr::after{
+          content: '';
+            display: block;
+            background: gray;
+            width: max-content;
+            height: 0.5vh;
+            border-radius: 5px;
+          }
+          th, td {
+            padding: 5px;
+            border-bottom: 1px solid #000000;
+          }</style>
 </head>
 <body>
+
     
+    <section class="side-nav-menu">
+        <nav>
+            <ul>
+                <li><img class="nav-logo" src="Gfx/logo.svg"></li>
+                <li><a href="#"><img class="nav-icon-side" src="Gfx/home.svg">Home</a></li>
+                <li><a href="#"><img class="nav-icon-side" src="Gfx/search.svg">Explore</a></li>
+                <li><a href="#"><img class="nav-icon-side" src="Gfx/heart.svg">Favorites</a></li>
+                <li><a href="#"><img class="nav-prof" src="pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg" height="30px">Profile</a></li>
+            </ul>
+        </nav>
+    </section>
+    
+    <main class="container">
+        <header class="main-header">
+            <h3>Your favorites</h3>
+            <img class="main-header-logo" src="Gfx/logo.svg">
+            <a href="#"><img class="add-icon" src="Gfx/add.svg"></a>
+        </header>
+        <article class="">
+
+            <table class="thetable">
+                <tr>
+                    <th>
+                        <p>Account</p>                      
+                    </th>
+                    <th>
+                        <p>Total likes</p>                       
+                    </th>                   
+                    <th>
+                        <p>Total Posts</p>                       
+                    </th>
+                    <th>
+                        <p>Age</p>
+                       
+                    </th>                  
+                    <th>
+                        <p>Link to profile</p>
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Name</p>
+                    </td>
+                    <td>
+                        <p>3500 </p>
+                    </td>
+                    <td>
+                         <p>25 </p>
+                    </td>
+                    <td>
+                        <p>32 years </p>
+                    </td>
+                    <td>
+                         <p>Go to profile </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Name</p>
+                    </td>
+                    <td>
+                        <p>3500 </p>
+                    </td>
+                    <td>
+                         <p>25 </p>
+                    </td>
+                    <td>
+                        <p>32 years </p>
+                    </td>
+                    <td>
+                         <p>Go to profile </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Name</p>
+                    </td>
+                    <td>
+                        <p>3500 </p>
+                    </td>
+                    <td>
+                         <p>25 </p>
+                    </td>
+                    <td>
+                        <p>32 years </p>
+                    </td>
+                    <td>
+                         <p>Go to profile </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Name</p>
+                    </td>
+                    <td>
+                        <p>3500 </p>
+                    </td>
+                    <td>
+                         <p>25 </p>
+                    </td>
+                    <td>
+                        <p>32 years </p>
+                    </td>
+                    <td>
+                         <p>Go to profile </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Name</p>
+                    </td>
+                    <td>
+                        <p>3500 </p>
+                    </td>
+                    <td>
+                         <p>25 </p>
+                    </td>
+                    <td>
+                        <p>32 years </p>
+                    </td>
+                    <td>
+                         <p>Go to profile </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Name</p>
+                    </td>
+                    <td>
+                        <p>3500 </p>
+                    </td>
+                    <td>
+                         <p>25 </p>
+                    </td>
+                    <td>
+                        <p>32 years </p>
+                    </td>
+                    <td>
+                         <p>Go to profile </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Name</p>
+                    </td>
+                    <td>
+                        <p>3500 </p>
+                    </td>
+                    <td>
+                         <p>25 </p>
+                    </td>
+                    <td>
+                        <p>32 years </p>
+                    </td>
+                    <td>
+                         <p>Go to profile </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Name</p>
+                    </td>
+                    <td>
+                        <p>3500 </p>
+                    </td>
+                    <td>
+                         <p>25 </p>
+                    </td>
+                    <td>
+                        <p>32 years </p>
+                    </td>
+                    <td>
+                         <p>Go to profile </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Name</p>
+                    </td>
+                    <td>
+                        <p>3500 </p>
+                    </td>
+                    <td>
+                         <p>25 </p>
+                    </td>
+                    <td>
+                        <p>32 years </p>
+                    </td>
+                    <td>
+                         <p>Go to profile </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Name</p>
+                    </td>
+                    <td>
+                        <p>3500 </p>
+                    </td>
+                    <td>
+                         <p>25 </p>
+                    </td>
+                    <td>
+                        <p>32 years </p>
+                    </td>
+                    <td>
+                         <p>Go to profile </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Name</p>
+                    </td>
+                    <td>
+                        <p>3500 </p>
+                    </td>
+                    <td>
+                         <p>25 </p>
+                    </td>
+                    <td>
+                        <p>32 years </p>
+                    </td>
+                    <td>
+                         <p>Go to profile </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Name</p>
+                    </td>
+                    <td>
+                        <p>3500 </p>
+                    </td>
+                    <td>
+                         <p>25 </p>
+                    </td>
+                    <td>
+                        <p>32 years </p>
+                    </td>
+                    <td>
+                         <p>Go to profile </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Name</p>
+                    </td>
+                    <td>
+                        <p>3500 </p>
+                    </td>
+                    <td>
+                         <p>25 </p>
+                    </td>
+                    <td>
+                        <p>32 years </p>
+                    </td>
+                    <td>
+                         <p>Go to profile </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Name</p>
+                    </td>
+                    <td>
+                        <p>3500 </p>
+                    </td>
+                    <td>
+                         <p>25 </p>
+                    </td>
+                    <td>
+                        <p>32 years </p>
+                    </td>
+                    <td>
+                         <p>Go to profile </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Name</p>
+                    </td>
+                    <td>
+                        <p>3500 </p>
+                    </td>
+                    <td>
+                         <p>25 </p>
+                    </td>
+                    <td>
+                        <p>32 years </p>
+                    </td>
+                    <td>
+                         <p>Go to profile </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Name</p>
+                    </td>
+                    <td>
+                        <p>3500 </p>
+                    </td>
+                    <td>
+                         <p>25 </p>
+                    </td>
+                    <td>
+                        <p>32 years </p>
+                    </td>
+                    <td>
+                         <p>Go to profile </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Name</p>
+                    </td>
+                    <td>
+                        <p>3500 </p>
+                    </td>
+                    <td>
+                         <p>25 </p>
+                    </td>
+                    <td>
+                        <p>32 years </p>
+                    </td>
+                    <td>
+                         <p>Go to profile </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Name</p>
+                    </td>
+                    <td>
+                        <p>3500 </p>
+                    </td>
+                    <td>
+                         <p>25 </p>
+                    </td>
+                    <td>
+                        <p>32 years </p>
+                    </td>
+                    <td>
+                         <p>Go to profile </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Name</p>
+                    </td>
+                    <td>
+                        <p>3500 </p>
+                    </td>
+                    <td>
+                         <p>25 </p>
+                    </td>
+                    <td>
+                        <p>32 years </p>
+                    </td>
+                    <td>
+                         <p>Go to profile </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Name</p>
+                    </td>
+                    <td>
+                        <p>3500 </p>
+                    </td>
+                    <td>
+                         <p>25 </p>
+                    </td>
+                    <td>
+                        <p>32 years </p>
+                    </td>
+                    <td>
+                         <p>Go to profile </p>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p>Name</p>
+                    </td>
+                    <td>
+                        <p>3500 </p>
+                    </td>
+                    <td>
+                         <p>25 </p>
+                    </td>
+                    <td>
+                        <p>32 years </p>
+                    </td>
+                    <td>
+                         <p>Go to profile </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Name</p>
+                    </td>
+                    <td>
+                        <p>3500 </p>
+                    </td>
+                    <td>
+                         <p>25 </p>
+                    </td>
+                    <td>
+                        <p>32 years </p>
+                    </td>
+                    <td>
+                         <p>Go to profile </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Name</p>
+                    </td>
+                    <td>
+                        <p>3500 </p>
+                    </td>
+                    <td>
+                         <p>25 </p>
+                    </td>
+                    <td>
+                        <p>32 years </p>
+                    </td>
+                    <td>
+                         <p>Go to profile </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Name</p>
+                    </td>
+                    <td>
+                        <p>3500 </p>
+                    </td>
+                    <td>
+                         <p>25 </p>
+                    </td>
+                    <td>
+                        <p>32 years </p>
+                    </td>
+                    <td>
+                         <p>Go to profile </p>
+                    </td>
+                </tr>
+        
+
+
+
+
+
+            </table>
+       
+
+        </article>
+
+       
+
+        <footer class="end">
+            <nav>
+                <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Explore</a></li>
+                        <li><a href="#">Favorites</a></li>
+                        <li><a href="#">Profile</a></li>
+                        <li><p>2023 Postagram</p></li>
+                </ul>
+            </nav>
+
+        </footer>
+
+
+    </main>
+
+
+   
 </body>
 </html>
