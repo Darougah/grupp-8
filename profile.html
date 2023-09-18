@@ -4,43 +4,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="index-style.css">
   <title>Detail</title>
 </head>
-<h1 class="rubrik">My profile</h1>
-<hr class="linje">
 
 <body>
 
-  <form class="formplace">
-   
-    <div class="row">
-      <div class="column">
-        <div><label for="fname">Name</label></div>
-        <div><input type="text" id="fname" name="firstname" placeholder="Your name.." required></div>
 
-        <div><label for="lname">Lastname</label></div>
-        <div><input type="text" id="lname" name="lastname" placeholder="Your last name.." required></div>
+  <section class="side-nav-menu">
+    <nav>
+      <ul>
+        <li><img class="nav-logo" src="Gfx/logo.svg"></li>
+        <li><a href="#"><img class="nav-icon-side" src="Gfx/home.svg">Home</a></li>
+        <li><a href="#"><img class="nav-icon-side" src="Gfx/search.svg">Explore</a></li>
+        <li><a href="#"><img class="nav-icon-side" src="Gfx/heart.svg">Favorites</a></li>
+        <li><a href="#"><img class="nav-prof" src="pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg"
+              height="30px">Profile</a></li>
+      </ul>
+    </nav>
+  </section>
 
-        <div><label for="email">Email</label></div>
-        <div><input type="email" id="email" placeholder="Enter email" name="email" pattern=".+@*.com" required></div>
+  <main class="container">
+    <header class="main-header">
+      <h3>My profile</h3>
+      <img class="main-header-logo" src="Gfx/logo.svg">
+      <a href="#"><img class="add-icon" src="Gfx/add.svg"></a>
+  </header>
 
-        <div><label for="age">Age</label></div>
-        <div><input type="number" id="age" name="age" placeholder="Your age.." required></div>  
+
+    <form class="formplace">
+
+      <div class="row">
+        <div class="column">
+          <div><label for="fname">Name</label></div>
+          <div><input type="text" id="fname" name="firstname" placeholder="Your name.." required></div>
+
+          <div><label for="lname">Lastname</label></div>
+          <div><input type="text" id="lname" name="lastname" placeholder="Your last name.." required></div>
+
+          <div><label for="email">Email</label></div>
+          <div><input type="email" id="email" placeholder="Enter email" name="email" pattern=".+@*.com" required></div>
+
+          <div><label for="age">Age</label></div>
+          <div><input type="number" id="age" name="age" placeholder="Your age.." required></div>
+        </div>
+
+        <div class="column">
+          <div><label for="message">About me </label></div>
+          <div><textarea id="message" name="message" rows="10" cols="25" style="resize:none"></textarea></div>
+
+          <div><label for="lname">Gender</label></div>
+          <div><input type="text" id="gender" name="gender" placeholder="Gender"></div>
+
+          <div><button type="submit">Submit</button></div>
+        </div>
       </div>
 
-      <div class="column">
-        <div><label for="message">About me </label></div>
-        <div><textarea id="message" name="message" rows="10" cols="25" style="resize:none"></textarea></div>
+    </form>
 
-        <div><label for="lname">Gender</label></div>
-        <div><input type="text" id="gender" name="gender" placeholder="Gender"></div>    
 
-        <div><button type="submit">Submit</button></div>
-      </div>
-    </div>
+    <section class="bottom-nav">
+      <nav>
+        <ul>
+          <li><a href="#"><img class="nav-icon" src="Gfx/home.svg"></a></li>
+          <li><a href="#"><img class="nav-icon" src="Gfx/search.svg"></a></li>
+          <li><a href="#"><img class="nav-icon" src="Gfx/heart.svg"></a></li>
+          <li><a href="#"><img class="prof" src="/pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg" width="30px"
+                height="30px"></a></li>
+          <div class="mini-logo">
+            <p>2023 Postagram</p>
+          </div>
+        </ul>
+      </nav>
 
-  </form>
+    </section>
+
+  </main>
+
+  <footer class="end">
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Explore</a></li>
+        <li><a href="#">Favorites</a></li>
+        <li><a href="#">Profile</a></li>
+        <li>
+          <p>2023 Postagram</p>
+        </li>
+      </ul>
+    </nav>
+
+  </footer>
+
+
 
 </body>
 
