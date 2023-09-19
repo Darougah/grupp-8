@@ -73,38 +73,10 @@ h3 {
     padding: 10px;
 }
 
-/* main content container */
-.main-content {
-    border: 1px solid black;
-
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 200px 300px 100px 100px;
-}
-
-/* big image container*/
-.main-img {
-    border: 1px solid black;
-    background-color: aqua;
-}
-/* main article container */
-.main-content{
-    background-color: palevioletred;
-    border: 1px solid black;
-}
-/* bottom article header */
-
-.bottom-img-header{
-    border: 1px solid black;
-    background-color: goldenrod;
-}
-
 /* bottom nav mobile*/
 
 .bottom-nav {
     background-color: white;
-
-    height: 50px;
 
     position: sticky;
     bottom: 0;
