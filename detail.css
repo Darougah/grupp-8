@@ -121,13 +121,21 @@ p {
 .bottom-img-header{
     border: 1px solid black;
     background-color: goldenrod;
-    height: 100px;
+    height: 90px;
     width: 50%;
 
     position: fixed;
     bottom: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     
 } 
+
+.prof-info {
+    padding: 10px;
+}
 
 /* bottom nav mobile*/
 
@@ -207,10 +215,16 @@ p {
     padding: 10px;
 }
 
+.profile-pic{
+    padding: 5px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
 /*  Layout responsive  */
 
 @media (max-width: 800px) {
-    .side-nav-menu, h3, .menu-text, .mini-logo, .end{
+    .side-nav-menu, h3, .menu-text, .mini-logo, .end, .date{
         display: none;
     }
     .container {
@@ -256,5 +270,8 @@ p {
     grid-template-columns: 1fr;
     
   }
+
+  .prof-info {
+    margin-left: 250px;
 }
 
