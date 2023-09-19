@@ -63,7 +63,7 @@
 
     display: flex;
     justify-content: space-between;
-    border-bottom: 2px solid gray;
+    border-bottom: 2px solid black;
 
 }
 
@@ -234,6 +234,11 @@ button:hover {
         gap: 1rem;
         padding-left: 150px;
         padding-right: 150px;
+    }
+
+    .main-image1, .main-image2, .main-image3, .main-image4{
+        border-radius: 5%;
+        box-shadow: 0px 2px 2px rgb(71, 70, 70, 0.5);
     }
 
     .image-header{
