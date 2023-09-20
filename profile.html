@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="profile.css">
-  <!-- <link rel="stylesheet" href="index-style.css"> -->
+  <link rel="stylesheet" href="index-style.css">
   <title>Profile</title>
 </head>
 
@@ -17,98 +17,96 @@
     <nav>
       <ul>
         <li><img class="nav-logo" src="Gfx/logo.svg"></li>
-        <li><a href="#"><img class="nav-icon-side" src="Gfx/home.svg">Home</a></li>
-        <li><a href="#"><img class="nav-icon-side" src="Gfx/search.svg">Explore</a></li>
-        <li><a href="#"><img class="nav-icon-side" src="Gfx/heart.svg">Favorites</a></li>
-        <li><a href="#"><img class="nav-prof" src="pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg"
+        <li><a href="index.html"><img class="nav-icon-side" src="Gfx/home.svg">Home</a></li>
+        <li><a href="explore.html"><img class="nav-icon-side" src="Gfx/search.svg">Explore</a></li>
+        <li><a href="favorites.html"><img class="nav-icon-side" src="Gfx/heart.svg">Favorites</a></li>
+        <li><a href="profile.html"><img class="nav-prof" src="pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg"
               height="30px">Profile</a></li>
       </ul>
     </nav>
   </section>
-<main class="container">
-  <header class="main-header">
-    <h3>My profile</h3>
-    <img class="main-header-logo" src="Gfx/logo.svg">
-    <a href="#"><img class="add-icon" src="Gfx/add.svg"></a>
-  </header>
 
-  <main> 
+  <main class="container">
+    <header class="main-header">
+      <h3>My profile</h3>
+      <img class="main-header-logo" src="Gfx/logo.svg">
+      <a href="#"><img class="add-icon" src="Gfx/add.svg"></a>
+    </header>
 
-    <form class="formplace">
+    <main>
 
-      <div class="row">
-        <div class="column">
-          <div><label for="fname">Name</label></div>
-          <div><input type="text" id="fname" name="firstname" placeholder="Your name.." required></div>
+      <form class="formplace">
 
-          <div><label for="lname">Lastname</label></div>
-          <div><input type="text" id="lname" name="lastname" placeholder="Your last name.." required></div>
+        <div class="row">
+          <div class="column">
+            <div><label for="fname">Name</label></div>
+            <div><input type="text" id="fname" name="firstname" placeholder="Your name.." required></div>
 
-          <div><label for="email">Email</label></div>
-          <div><input type="email" id="email" placeholder="Enter email" name="email" pattern=".+@*.com" required></div>
+            <div><label for="lname">Lastname</label></div>
+            <div><input type="text" id="lname" name="lastname" placeholder="Your last name.." required></div>
 
-          <div><label for="age">Age</label></div>
-          <div><input type="number" id="age" name="age" placeholder="Your age.." required></div>
-        </div>
+            <div><label for="email">Email</label></div>
+            <div><input type="email" id="email" placeholder="Enter email" name="email" pattern=".+@*.com" required>
+            </div>
 
-        
-        <div class="column">
-          <div><label for="message">About me </label></div>
-          <div><textarea id="message" name="message" rows="10" cols="25" style="resize:none"></textarea></div>
-
-          <!-- <div><label for="gender">Gender</label></div>
-          <div><input type="gender" id="gender" name="gender" placeholder="Gender"></div>
-          <option value=" Female"></option>
-          <option value="Man"></option> -->
-          
-
-           <div><label for="gender">Gender:</label>
-           <select name="gender">
-             <option value="">Please select one…</option>
-             <option value="female">Female</option>
-             <option value="male">Male</option>
-             <option value="non-binary">Non-Binary</option>
-             <option value="other">Other</option>
-             <option value="Prefer not to answer">Perfer not to Answer</option>
-           </select>
+            <div><label for="age">Age</label></div>
+            <div><input type="number" id="age" name="age" placeholder="Your age.." required></div>
           </div>
 
-          <div><button type="submit">Submit</button></div>
+
+          <div class="column">
+            <div><label for="message">About me </label></div>
+            <div><textarea id="message" name="message" rows="10" cols="25" style="resize:none"></textarea></div>
+
+
+
+            <div><label for="gender">Gender:</label></div>
+            <select name="gender">
+              <option value="">Please select one…</option>
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+              <option value="non-binary">Non-Binary</option>
+              <option value="other">Other</option>
+              <option value="Prefer not to answer">Perfer not to Answer</option>
+            </select>
+
+
+            <div><button type="submit">Submit</button></div>
+          </div>
         </div>
-      </div>
 
-    </form>
+      </form>
 
 
-    <section class="bottom-nav">
-      <nav>
+      <section class="bottom-nav">
         <ul>
-          <li><img class="nav-logo" src="Gfx/logo.svg"></li>
-          <li><a href="index.html"><img class="nav-icon-side" src="Gfx/home.svg">Home</a></li>
-          <li><a href="explore.html"><img class="nav-icon-side" src="Gfx/search.svg">Explore</a></li>
-          <li><a href="favorites.html"><img class="nav-icon-side" src="Gfx/heart.svg">Favorites</a></li>
-          <li><a href="profile.html"><img class="nav-prof" src="pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg"
-                height="30px">Profile</a></li>
+          <li><a href="index.html"><img class="nav-icon" src="Gfx/home.svg"></a></li>
+          <li><a href="explore.html"><img class="nav-icon" src="Gfx/search.svg"></a></li>
+          <li><a href="favorites.html"><img class="nav-icon" src="Gfx/heart.svg"></a></li>
+          <li><a href="profile.html"><img class="prof" src="/pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg"
+                width="30px" height="30px"></a></li>
+          <div class="mini-logo">
+            <p>2023 Postagram</p>
+          </div>
         </ul>
-      </nav>
 
-    </section>
+      </section>
 
+    </main>
   </main>
-</main>
   <footer class="end">
     <nav class="text-bottom">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="explore.html">Explore</a></li>
-          <li><a href="favorites.html">Favorites</a></li>
-          <li><a href="profile.html">Profile</a></li>
-        </ul>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="explore.html">Explore</a></li>
+        <li><a href="favorites.html">Favorites</a></li>
+        <li><a href="profile.html">Profile</a></li>
+      </ul>
 
-        <p>2023 Postagram</p>
+      <p>2023 Postagram</p>
     </nav>
 
-</footer>
+  </footer>
 
 
 
