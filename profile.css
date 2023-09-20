@@ -1,91 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Raleway:wght@300;400;700&display=swap');
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
 
-.formplace {
+/*  side nav-menu  */
+.side-nav-menu{
+    float: left;
+
+    width: 20%;
+    height: 100%;
+}
+.side-nav-menu ul{
     display: flex;
-    flex-flow: column;
-    align-items: center;
-    margin: auto;
-    margin-top: 40px;
-    width: 80%t;
-    border: solid lightgray 2px;
-    padding: 2rem;  
-  }
-  
-  .formplace label {
-    margin: 5px 10px 5px 0;
-    font-weight: bolder;  
-  }
-  
-  .formplace input {
-    vertical-align: middle;
-    margin: 5px 10px 5px 0;
-    padding: 10px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 1.4rem;
-    background-color: lightgray;
-    font-weight: bolder
-  }
-  
-  .formplace button {
-    padding: 10px 3.7rem;
-    background-color: rgb(5, 95, 5);
-    border: 1px solid #ddd;
-    color: white;
-    cursor: pointer;
-    border-radius: 1.4rem;
-  }
-  
-  .formplace button:hover {
-    background-color: rgba(5, 95, 5, 0.534);
-  }
-  
-  .formplace textarea {
-    background-color: lightgray;
-    border: 1px;
-    border-radius: 1.4rem;
-  }
+    flex-direction: column; 
+    gap: 2rem;
+}
 
-  .formplace input:focus {
-    background-color: red;
-  }
-  .formplace button:hover {
-    background-color: rgba(5, 95, 5, 0.534);
-  }  
-  
-  @media (max-width: 800px) {
-    .formplace input {
-      margin: 10px 0;
+.side-nav-menu ul li a{
+    display: flex;
+    align-items: center;
+    color: black;
+    font-family: raleway;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.side-nav-menu ul li a:hover{
+    color: grey;
+}
+
+.nav-logo {
+    margin-top: 20px;
+    margin-left: 10px;
+    height: 25px;
+}
+
+/* main container  */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 400px 400px 400px 400px 50px;
+
+    border: 1px solid gray;
+    float: right;
+
+    
+    width: 80%;
+    height: 100%;
+}
+
+.main-header {
+    background-color: white;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid gray;
+
+}
+
+h3 {
+    font-family: raleway;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* bottom nav mobile*/
+
+.bottom-nav {
+    background-color: white;
+
+    position: sticky;
+    bottom: 0;
+}
+
+.bottom-nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+ /* bottom nav big-screen*/
+ 
+.end {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgb(197, 192, 192);
+    background-color: white;
+
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+}
+
+.text-bottom ul{
+    display: flex;
+    gap: 1rem;
+}
+
+.text-bottom ul li a{
+    color: gray;
+    font-family: raleway;
+    font-size: 14px;
+}
+.text-bottom ul li a:hover {
+    color: lightgray;
+}
+.end p{
+    font-family: raleway;
+    font-size: 12px;
+    color: rgb(156, 153, 153);
+}
+
+.text-bottom {
+    width: 90%;
+    padding-left: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*  Images and logos  */
+
+.main-header-logo{
+    height: 30px;
+}
+.add-icon {
+    height: 25px;
+}
+
+.prof, .nav-prof, .prof-header2{
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.nav-icon, .nav-icon-side{
+    padding: 10px;
+}
+
+/*  Layout responsive  */
+
+@media (max-width: 800px) {
+    .side-nav-menu, h3, .menu-text, .mini-logo, .end{
+        display: none;
     }
-  
-    .formplace {
-      flex-direction: column;
-      align-items: stretch;
+    .container {
+        width: 100%;
     }
-  }
-  
+}
+
+@media (min-width: 800px) {
+
+    .main-header-logo, .add-icon, .bottom-nav, .nav-icon, .prof{
+        display: none;
+    }
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50px 350px 350px 50px;
+        gap: 1rem;
+        padding-left: 150px;
+        padding-right: 150px;
+    }
+
+    .main-header {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        border-bottom: 2px solid gray;
+    }
+
+    .bottom-nav {
+        grid-column-start: 1;
+        grid-column-end: 3;
+       
+
+    }
+    .side-nav-menu {
+        height: 100%;
+    }
+}
+
+
+
+
+
+
 
 
 /* this code is for profile.html */
 
-.rubrik {
-  text-align: center;
+
+.container{
+  width: 80%;
+
+}
+.formplace {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin: auto;
+  margin-top: 40px;
+  width: 80%;
+  border: solid lightgray 2px;
+  padding: 2rem;  
 }
 
-/* hr {
-  width: 20%;
-  background-color: darkgray;
-  height: 3px;
-  margin: auto;
-} */
+.formplace label {
+  margin: 5px 10px 5px 0;
+  font-weight: bolder;  
+}
+
+
+.formplace select{
+
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  background-color: lightgray;
+  font-weight: bolder;
+  
+}
+.formplace input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  background-color: lightgray;
+  font-weight: bolder
+}
+
+.formplace button {
+  padding: 10px 5rem;
+  margin: 0.5px;
+  background-color: rgb(5, 95, 5);
+  border: 1px solid #ddd;
+  color: white;
+  cursor: pointer;
+  border-radius: 1.4rem;
+}
+
+.formplace button:hover {
+  background-color: rgba(5, 95, 5, 0.534);
+}
+
+.formplace textarea {
+  background-color: lightgray;
+  border: 1px;
+  border-radius: 0.2rem;
+  
+}
+
+.formplace input:focus {
+  background-color: rgba(255, 0, 0, 0.434);
+}
+.formplace button:hover {
+  background-color: rgba(5, 95, 5, 0.534);
+}  
+
+@media (max-width: 800px) {
+  .formplace input {
+    margin: 10px 0;
+  }
+
+  .formplace {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
 
 /* Create two equal columns that floats next to each other */
 .column {
   float: left;
-  width: 50%;
+  width: 100%;
   padding: 10px;
   height: 300px;
-  /* Should be removed. Only for demonstration */
 }
 
 /* Clear floats after the columns */
