@@ -65,13 +65,15 @@ h3 {
 
 /* main content container */
 .main-content {
+
+    border-left: 1px solid gray;
    
 
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 200px 260px 260px;
 
-    width: 100vw;
+    width: 100%;
 }
 
 /* big image container*/
@@ -271,3 +273,4 @@ p {
     margin-left: 250px;
 }
 
+}
