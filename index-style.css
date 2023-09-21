@@ -78,6 +78,14 @@ h3 {
     padding: 10px;
 }
 
+h2 {
+    display: none;
+}
+
+h4{
+    display: none;
+}
+
 /* bottom nav mobile*/
 
 .bottom-nav {
