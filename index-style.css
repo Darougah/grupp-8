@@ -176,6 +176,11 @@ button:hover {
     background-color: rgb(59, 58, 58);
 }
 
+.btn:visited{
+    color: white;
+}
+
+
 .left {
     display: flex;
     gap: 1rem;
