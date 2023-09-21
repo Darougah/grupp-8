@@ -4,7 +4,7 @@
   display: flex;
   margin: auto;
   margin-top: 40px;
-  width: 90%;
+  width: 80%;
   border: solid lightgray 2px;
   padding: 2rem;
 }
@@ -58,7 +58,7 @@
 
 /* focus red */
 .formplace input:focus {
-  background-color: rgba(255, 0, 0, 0.434);
+  background-color: rgba(200, 255, 0, 0.434);
 }
 
 
