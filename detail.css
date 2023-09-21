@@ -34,6 +34,10 @@
     color: grey;
 }
 
+.side-nav-menu ul li a:active{
+    text-decoration: underline;
+}
+
 .nav-logo {
     margin-top: 20px;
     margin-left: 10px;
