@@ -1,57 +1,37 @@
 /* this code is for profile.html */
+
 .formplace {
   display: flex;
-  flex-flow: column;
-  align-items: center;
   margin: auto;
   margin-top: 40px;
   width: 80%;
   border: solid lightgray 2px;
   padding: 2rem;
+
 }
 
 .formplace label {
-  margin: 5px 10px 5px 0;
+
   font-weight: bolder;
 }
 
 
 .formplace select {
 
-  vertical-align: middle;
-  margin: 5px 10px 5px 0;
+  margin: 5px 10px 20px 0;
   padding: 10px;
-  background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 0.5rem;
   background-color: lightgray;
-  font-weight: bolder;
-
 }
 
 .formplace input {
-  vertical-align: middle;
-  margin: 5px 10px 5px 0;
+  margin: 10px 0px 20px;
   padding: 10px;
-  background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 0.5rem;
   background-color: lightgray;
   font-weight: bolder
-}
-
-.formplace button {
-  padding: 10px 5rem;
-  margin: 0.5px;
-  background-color: rgb(5, 95, 5);
-  border: 1px solid #ddd;
-  color: white;
-  cursor: pointer;
-  border-radius: 1.4rem;
-}
-
-.formplace button:hover {
-  background-color: rgba(5, 95, 5, 0.534);
 }
 
 .formplace textarea {
@@ -61,12 +41,35 @@
 
 }
 
-.formplace input:focus {
-  background-color: rgba(255, 0, 0, 0.434);
+/* button code */
+
+.formplace button {
+  padding: 10px 5rem;
+  margin: 0.5px;
+  background-color: rgb(5, 95, 5);
+  border: 1px solid #ddd;
+  color: white;
+  cursor: pointer;
+  border-radius: 0.7rem;
 }
 
 .formplace button:hover {
   background-color: rgba(5, 95, 5, 0.534);
+}
+
+/* focus red */
+.formplace input:focus {
+  background-color: rgba(255, 0, 0, 0.434);
+}
+
+
+
+/* two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  min-width: 200px;
 }
 
 @media (max-width: 800px) {
@@ -80,26 +83,9 @@
   }
 }
 
-
-/* Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 50%;
-  padding: 10px;
-  min-width: 200px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 /* Responsive layout*/
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
   }
-
 }
