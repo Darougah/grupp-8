@@ -242,12 +242,17 @@ button:hover {
 /*  Layout responsive  */
 
 @media (max-width: 800px) {
-    .side-nav-menu, h3, .menu-text, button, .mini-logo, .end{
+    .side-nav-menu, h3, .menu-text, .mini-logo, .end{
         display: none;
     }
     .container {
         width: 100%;
     } 
+
+    button{
+        margin-top: 250px;
+        opacity: 0.9;
+    }
 
 }
 
@@ -288,5 +293,7 @@ button:hover {
     .side-nav-menu {
         height: 100%;
     }
+
+   
 }
 
