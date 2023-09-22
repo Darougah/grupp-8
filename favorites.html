@@ -1,360 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="profile(detail).css">
+    <link rel="stylesheet" href="träning4.css">
 
-    <title>Favorites</title>
-
+    <title>Document</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Raleway:wght@300;400;700&display=swap');
+   @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Raleway:wght@300;400;700&display=swap');
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            text-decoration: none;
-        }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
 
-        /*  side nav-menu  */
-        .side-nav-menu {
-            float: left;
+/*  side nav-menu  */
+.side-nav-menu{
+    float: left;
 
-            width: 20%;
-            height: 100%;
-        }
+    width: 20%;
+    height: 100%;
+}
+.side-nav-menu ul{
+    display: flex;
+    flex-direction: column; 
+    gap: 2rem;
+}
 
-        .side-nav-menu ul {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
+.side-nav-menu ul li a{
+    display: flex;
+    align-items: center;
+    color: black;
+    font-family: raleway;
+    font-size: 14px;
+    font-weight: bold;
+}
 
-        .side-nav-menu ul li a {
-            display: flex;
-            align-items: center;
-            color: black;
-            font-family: raleway;
-            font-size: 14px;
-            font-weight: bold;
-        }
+.side-nav-menu ul li a:hover{
+    color: grey;
+}
 
-        .side-nav-menu ul li a:hover {
-            color: grey;
-        }
+.nav-logo {
+    margin-top: 20px;
+    margin-left: 10px;
+    height: 25px;
+}
 
-        .nav-logo {
-            margin-top: 20px;
-            margin-left: 10px;
-            height: 25px;
-        }
+/* main container  */
 
-        /* main container  */
+.container {
+    display: flex;
+    flex-direction: column;
 
-        .container {
-            height: 1000px;
-            width: 100%;
-        }
+    border: 1px solid gray;
+    
+    
+    
+    width: 80%;
+    height: 850px;
+    
+}
 
-        .main-header {
-            background-color: white;
-            padding: 10px;
-            position: sticky;
-            top: 0;
+.main-header {
+    background-color: white;
+    padding: 10px;
+    position: sticky;
+    top: 0;
 
-            display: flex;
-            justify-content: space-between;
-            border-bottom: 2px solid gray;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid gray;
 
-        }
+}
 
-        h3 {
-            font-family: raleway;
-            font-weight: bold;
-            padding: 10px;
-        }
+h3 {
+    font-family: raleway;
+    font-weight: bold;
+    padding: 10px;
+}
 
-        /* bottom nav mobile*/
+/* bottom nav mobile*/
 
-        .bottom-nav {
-            background-color: white;
-
-            position: sticky;
-            bottom: 0;
-        }
-
-        .bottom-nav ul {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        /* bottom nav big-screen*/
-
-        .end {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            border: 1px solid rgb(197, 192, 192);
-            background-color: white;
-
-            position: fixed;
-            bottom: 0;
-            height: 50px;
-            width: 100%;
-        }
-
-        .text-bottom ul {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .text-bottom ul li a {
-            color: gray;
-            font-family: raleway;
-            font-size: 14px;
-        }
-
-        .text-bottom ul li a:hover {
-            color: lightgray;
-        }
-
-        .end p {
-            font-family: raleway;
-            font-size: 12px;
-            color: rgb(156, 153, 153);
-        }
-
-        .text-bottom {
-            width: 90%;
-            padding-left: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        /*  Image header  */
-
-        .image-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            font-family: raleway;
-            font-size: 12px;
-
-            gap: 1rem;
-            background-color: white;
-            height: 50px;
-            padding: 10px;
-        }
-
-        .image-header p {
-            padding-top: 10px;
-            color: black;
-        }
-
-        /* link on main-images */
-        button {
-            margin-top: 200px;
-
-            width: 100%;
-            height: 50px;
-
-            background-color: rgb(44, 44, 44);
-            color: white;
-
-            font-family: raleway;
-            font-weight: bold;
-        }
-
-      
-
-        .left {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .right {
-            padding: 5px;
-        }
-
-        .main-header-logo {
-            height: 30px;
-        }
-
-        .add-icon {
-            height: 25px;
-        }
-
-        .prof,
-        .nav-prof,
-        .prof-header2 {
-            border-radius: 50%;
-            margin: 10px;
-        }
-
-        .nav-icon,
-        .nav-icon-side {
-            padding: 10px;
-        }
-
-        /*  Layout responsive  */
-
-        @media (max-width: 800px) {
-        
-            .side-nav-menu,
-            h3,
-            .menu-text,
-            button,
-            .mini-logo,
-            .end {
-                display: none;
-            }
-
-            .container {
-                width: 100%;
-                height:100%;
-            }
-            table tr{
-                height: 100%;
-            }
-            .bottom-nav{
-                max-width: 500px;
-            }
-        }
-
-        @media (min-width: 800px) {
-
-            .main-header-logo,
-            .add-icon,
-            .bottom-nav,
-            .nav-icon,
-            .prof {
-                display: none;
-            }
-
-            .container {
-                display: grid;
-                position: sticky;
-                grid-template-columns: 1fr;
-                height: 1000px;
-                bottom: 0px;
-                
-            }
-
-            .image-header {
-                opacity: 0.8;
-            }
-
-            .main-header {
-                grid-column-start: 1;
-                grid-column-end: 3;
-                border-bottom: 2px solid gray;
-            }
-
-            .bottom-nav {
-                grid-column-start: 1;
-                grid-column-end: 3;
-
-
-            }
-
-            .side-nav-menu {
-                height: 100%;
-            }
-        }
-
-        .Thetable {
-            /* display: flex; */
-            /* position: fixed; */
-
-            /* text-underline-offset: auto; */
-            /* text-align: center; .*/
-
-        }
-
-        table tr {
-            display: flex;
-            
-            /* gap: 10%; */
-            border-bottom: 1px solid black;
-            justify-content: space-between;
-            padding: 10px;
-            width: auto;
-            align-items: center;
-
-        }
-
-        table p {
-            display: flex;
-            width: auto;
-            min-width: 120px;
-        }
-       
-        .prof-row{
-            display: flex;
-            gap: 10px;
-            align-items: center;
-        }
-
-        .profilbild{
-            display: flex;
-            border-radius: 50%;
-        }
-        .bottom-nav {
+.bottom-nav {
     background-color: white;
 
-    position: sticky;
+    position: fixed;
+    
     bottom: 0;
+    width: 100%;
 }
 
 .bottom-nav ul{
     display: flex;
     justify-content: space-between;
+    
+    
+    
 }
-       
+
+ /* bottom nav big-screen*/
+ 
+.end {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgb(197, 192, 192);
+    background-color: white;
+
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+}
+
+.text-bottom ul{
+    display: flex;
+    gap: 1rem;
+}
+
+.text-bottom ul li a{
+    color: gray;
+    font-family: raleway;
+    font-size: 14px;
+}
+.text-bottom ul li a:hover {
+    color: lightgray;
+}
+.end p{
+    font-family: raleway;
+    font-size: 12px;
+    color: rgb(156, 153, 153);
+}
+
+.text-bottom {
+    width: 90%;
+    padding-left: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*  Images and logos  */
+
+.main-header-logo{
+    height: 30px;
+}
+.add-icon {
+    height: 25px;
+}
+
+.prof, .nav-prof, .prof-header2{
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.nav-icon, .nav-icon-side{
+    padding: 10px;
+}
+
+/*  Layout responsive  */
+
+    
+@media (max-width: 413px) {
+    
+    .bottom-nav {
+    
+    width: 420px;
+    
+    
+    }
+    .container{
+        height:100px;
+    }
+
+    table  p {
+    display: flex;
+    width: auto;
+    min-width: 16vw;
+    
+}
+
+}
+@media (max-width: 800px) {
+    .side-nav-menu, h3, .menu-text, .mini-logo, .end{
+        display: none;
+    }
+    .container {
+        width: 100%;
+        height: auto;
+    }
+    table  p {
+    display: flex;
+    width: auto;
+    min-width: 16vw;
+}
+.tr_move1_3{
+    width: 100px;
+
+}
+}
+
+
+
+
+@media (min-width: 800px) {
+
+    .main-header-logo, .add-icon, .bottom-nav, .nav-icon, .prof{
+        display: none;
+    }
+    .container {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50px ;
+        gap: 1rem;
         
+    }
+
+    .main-header {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        border-bottom: 2px solid gray;
+    }
+
+    .bottom-nav {
+        grid-column-start: 1;
+        grid-column-end: 3;
+       
+
+    }
+    .side-nav-menu {
+        height: 100%;
+        
+    }
+    table  p {
+    display: flex;
+    width: auto;
+    min-width: 15vw;
+
+
+
+}
+.tr_move1_1 {
+    display: flex;
+    min-width: 120px;
+    
+    
+    
+}
+.tr_move2_1 {
+    display: flex;
+    min-width: 90px;
+    
+}
+    
+}
+
+
+
+table tr {
+    display: flex;
+    border-bottom: 1px solid black;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    align-items: center;
+
+}
+
+
+
+
+
+
+
+.prof-row{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+.profilbild{
+    display: flex;
+    border-radius: 50%;
+
+}
+
+
+
+
+
+
     </style>
 </head>
-
 <body>
-
 
     <section class="side-nav-menu">
         <nav>
             <ul>
                 <li><img class="nav-logo" src="Gfx/logo.svg"></li>
-                <li><a href="#"><img class="nav-icon-side" src="Gfx/home.svg">Home</a></li>
-                <li><a href="#"><img class="nav-icon-side" src="Gfx/search.svg">Explore</a></li>
-                <li><a href="#"><img class="nav-icon-side" src="Gfx/heart.svg">Favorites</a></li>
-                <li><a href="#"><img class="nav-prof" src="pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg"
-                            height="30px">Profile</a></li>
+                <li><a href="index.html"><img class="nav-icon-side" src="Gfx/home.svg">Home</a></li>
+                <li><a href="explore.html"><img class="nav-icon-side" src="Gfx/search.svg">Explore</a></li>
+                <li><a href="favorites.html"><img class="nav-icon-side" src="Gfx/heart.svg">Favorites</a></li>
+                <li><a href="profile.html"><img class="nav-prof" src="pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg" height="30px">Profile</a></li>
             </ul>
         </nav>
     </section>
-
+    
     <main class="container">
+
         <header class="main-header">
             <h3>Your favorites</h3>
             <img class="main-header-logo" src="Gfx/logo.svg">
             <a href="#"><img class="add-icon" src="Gfx/add.svg"></a>
         </header>
-        <article class="">
+        <article class="table_contener">
 
-            <table class="Thetable">
-                <tr>
+            <table >
+
+                <tr >
                     <th>
-                        <p>Account</p>
+                        <p class="tr_move1_1">Account</p>
                     </th>
                     <th>
-                        <p>Total likes</p>
+                        <p class="tr_move1_2">Total likes</p>
                     </th>
                     <th>
-                        <p>Total Posts</p>
+                        <p class="tr_move1_3">Total Posts</p>
                     </th>
                     <th>
                         <p>Age</p>
@@ -364,12 +340,12 @@
                         <p>Link to profile</p>
                     </th>
                 </tr>
-                <tr>
+                <tr >
                     <td class="prof-row">
-                        <img class="profilbild" src="./pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg" width="20px" alt=""><p>Name</p>
+                        <img class="profilbild" src="./pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg" width="20px" alt=""><p class="tr_move2_1">Name</p>
                     </td>
                     <td>
-                        <p>3500 </p>
+                        <p class="tr_move2_2">3500 </p>
                     </td>
                     <td>
                         <p>25 </p>
@@ -383,10 +359,27 @@
                 </tr>
                 <tr>
                     <td class="prof-row">
-                        <img class="profilbild" src="./pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg" width="20px" alt=""><p>Name</p>
+                        <img class="profilbild" src="./pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg" width="20px" alt=""><p class="tr_move2_1">Name</p>
                     </td>
                     <td>
-                        <p>3500 </p>
+                        <p class="tr_move2_2">3500 </p>
+                    </td>
+                    <td>
+                        <p>25 </p>
+                    </td>
+                    <td>
+                        <p>32 years </p>
+                    </td>
+                    <td>
+                        <p>Go to profile </p>
+                    </td>
+                </tr>
+                <tr >
+                    <td class="prof-row">
+                        <img class="profilbild" src="./pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg" width="20px" alt=""><p class="tr_move2_1">Name</p>
+                    </td>
+                    <td>
+                        <p class="tr_move2_2">3500 </p>
                     </td>
                     <td>
                         <p>25 </p>
@@ -400,10 +393,27 @@
                 </tr>
                 <tr>
                     <td class="prof-row">
-                        <img class="profilbild" src="./pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg" width="20px" alt=""><p>Name</p>
+                        <img class="profilbild" src="./pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg" width="20px" alt=""><p class="tr_move2_1">Name</p>
                     </td>
                     <td>
-                        <p>3500 </p>
+                        <p class="tr_move2_2">3500 </p>
+                    </td>
+                    <td>
+                        <p>25 </p>
+                    </td>
+                    <td>
+                        <p>32 years </p>
+                    </td>
+                    <td>
+                        <p>Go to profile </p>
+                    </td>
+                </tr>
+                <tr >
+                    <td class="prof-row">
+                        <img class="profilbild" src="./pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg" width="20px" alt=""><p class="tr_move2_1">Name</p>
+                    </td>
+                    <td>
+                        <p class="tr_move2_2">3500 </p>
                     </td>
                     <td>
                         <p>25 </p>
@@ -417,10 +427,27 @@
                 </tr>
                 <tr>
                     <td class="prof-row">
-                        <img class="profilbild" src="./pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg" width="20px" alt=""><p>Name</p>
+                        <img class="profilbild" src="./pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg" width="20px" alt=""><p class="tr_move2_1">Name</p>
                     </td>
                     <td>
-                        <p>3500 </p>
+                        <p class="tr_move2_2">3500 </p>
+                    </td>
+                    <td>
+                        <p>25 </p>
+                    </td>
+                    <td>
+                        <p>32 years </p>
+                    </td>
+                    <td>
+                        <p>Go to profile </p>
+                    </td>
+                </tr>
+                <tr >
+                    <td class="prof-row">
+                        <img class="profilbild" src="./pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg" width="20px" alt=""><p class="tr_move2_1">Name</p>
+                    </td>
+                    <td>
+                        <p class="tr_move2_2">3500 </p>
                     </td>
                     <td>
                         <p>25 </p>
@@ -434,10 +461,27 @@
                 </tr>
                 <tr>
                     <td class="prof-row">
-                        <img class="profilbild" src="./pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg" width="20px" alt=""><p>Name</p>
+                        <img class="profilbild" src="./pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg" width="20px" alt=""><p class="tr_move2_1">Name</p>
                     </td>
                     <td>
-                        <p>3500 </p>
+                        <p class="tr_move2_2">3500 </p>
+                    </td>
+                    <td>
+                        <p>25 </p>
+                    </td>
+                    <td>
+                        <p>32 years </p>
+                    </td>
+                    <td>
+                        <p>Go to profile </p>
+                    </td>
+                </tr>
+                <tr >
+                    <td class="prof-row">
+                        <img class="profilbild" src="./pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg" width="20px" alt=""><p class="tr_move2_1">Name</p>
+                    </td>
+                    <td>
+                        <p class="tr_move2_2">3500 </p>
                     </td>
                     <td>
                         <p>25 </p>
@@ -451,10 +495,10 @@
                 </tr>
                 <tr>
                     <td class="prof-row">
-                        <img class="profilbild" src="./pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg" width="20px" alt=""><p>Name</p>
+                        <img class="profilbild" src="./pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg" width="20px" alt=""><p class="tr_move2_1">Name</p>
                     </td>
                     <td>
-                        <p>3500 </p>
+                        <p class="tr_move2_2">3500 </p>
                     </td>
                     <td>
                         <p>25 </p>
@@ -466,29 +510,12 @@
                         <p>Go to profile </p>
                     </td>
                 </tr>
-                <tr>
+                <tr >
                     <td class="prof-row">
-                        <img class="profilbild" src="./pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg" width="20px" alt=""><p>Name</p>
+                        <img class="profilbild" src="./pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg" width="20px" alt=""><p class="tr_move2_1">Name</p>
                     </td>
                     <td>
-                        <p>3500 </p>
-                    </td>
-                    <td>
-                        <p>25 </p>
-                    </td>
-                    <td>
-                        <p>32 years </p>
-                    </td>
-                    <td>
-                        <p>Go to profile </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="prof-row">
-                        <img class="profilbild" src="./pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg" width="20px" alt=""><p>Name</p>
-                    </td>
-                    <td>
-                        <p>3500 </p>
+                        <p class="tr_move2_2">3500 </p>
                     </td>
                     <td>
                         <p>25 </p>
@@ -500,150 +527,42 @@
                         <p>Go to profile </p>
                     </td>
                 </tr>
-                <tr>
-                    <td class="prof-row">
-                        <img class="profilbild" src="./pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg" width="20px" alt=""><p>Name</p>
-                    </td>
-                    <td>
-                        <p>3500 </p>
-                    </td>
-                    <td>
-                        <p>25 </p>
-                    </td>
-                    <td>
-                        <p>32 years </p>
-                    </td>
-                    <td>
-                        <p>Go to profile </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="prof-row">
-                        <img class="profilbild" src="./pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg" width="20px" alt=""><p>Name</p>
-                    </td>
-                    <td>
-                        <p>3500 </p>
-                    </td>
-                    <td>
-                        <p>25 </p>
-                    </td>
-                    <td>
-                        <p>32 years </p>
-                    </td>
-                    <td>
-                        <p>Go to profile </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="prof-row">
-                        <img class="profilbild" src="./pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg" width="20px" alt=""><p>Name</p>
-                    </td>
-                    <td>
-                        <p>3500 </p>
-                    </td>
-                    <td>
-                        <p>25 </p>
-                    </td>
-                    <td>
-                        <p>32 years </p>
-                    </td>
-                    <td>
-                        <p>Go to profile </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="prof-row">
-                        <img class="profilbild" src="./pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg" width="20px" alt=""><p>Name</p>
-                    </td>
-                    <td>
-                        <p>3500 </p>
-                    </td>
-                    <td>
-                        <p>25 </p>
-                    </td>
-                    <td>
-                        <p>32 years </p>
-                    </td>
-                    <td>
-                        <p>Go to profile </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="prof-row">
-                        <img class="profilbild" src="./pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg" width="20px" alt=""><p>Name</p>
-                    </td>
-                    <td>
-                        <p>3500 </p>
-                    </td>
-                    <td>
-                        <p>25 </p>
-                    </td>
-                    <td>
-                        <p>32 years </p>
-                    </td>
-                    <td>
-                        <p>Go to profile </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="prof-row">
-                        <img class="profilbild" src="./pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg" width="20px" alt=""><p>Name</p>
-                    </td>
-                    <td>
-                        <p>3500 </p>
-                    </td>
-                    <td>
-                        <p>25 </p>
-                    </td>
-                    <td>
-                        <p>32 years </p>
-                    </td>
-                    <td>
-                        <p>Go to profile </p>
-                    </td>
-                </tr>
-
-
+                
 
 
 
 
 
             </table>
-
-            
         </article>
+       
 
         <section class="bottom-nav">
-            <ul>
-                <li><a href="#"><img class="nav-icon" src="Gfx/home.svg"></a></li>
-                <li><a href="#"><img class="nav-icon" src="Gfx/search.svg"></a></li>
-                <li><a href="#"><img class="nav-icon" src="Gfx/heart.svg"></a></li>
-                <li><a href="#"><img class="prof" src="/pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg" width="30px" height="30px"></a></li>
-               
-            </ul>
-
-        </section>
-    </main>
-
-        <footer class="end">
-            <nav class="text-bottom">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Explore</a></li>
-                    <li><a href="#">Favorites</a></li>
-                    <li><a href="#">Profile</a></li>
+                    <li><a href="index.html"><img class="nav-icon" src="Gfx/home.svg"></a></li>
+                    <li><a href="explore.html"><img class="nav-icon" src="Gfx/search.svg"></a></li>
+                    <li><a href="favorites.html"><img class="nav-icon" src="Gfx/heart.svg"></a></li>
+                    <li><a href="profile.html"><img class="prof" src="/pictures/nathan-dumlao-zUNs99PGDg0-unsplash.jpg" width="30px" height="30px"></a></li>
 
                 </ul>
-            </nav>
+                <div class="mini-logo"><p>2023 Postagram</p></div>
+        </section>
+
+    </main>
+
+    <footer class="end">
+        <nav class="text-bottom">
+            <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="explore.html">Explore</a></li>
+                    <li><a href="favorites.html">Favorites</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+            </ul>
+
             <p>2023 Postagram</p>
-        </footer>
+        </nav>
 
-
-   
-
-
-
+    </footer>
+    
 </body>
-
 </html>
