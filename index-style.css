@@ -11,6 +11,7 @@
 /*  side nav-menu  */
 .side-nav-menu{
     float: left;
+    position: fixed;
 
     width: 20%;
     height: 100%;
@@ -65,6 +66,8 @@
     padding: 10px;
     position: sticky;
     top: 0;
+
+    z-index: 9999;
 
     display: flex;
     justify-content: space-between;
@@ -202,18 +205,22 @@ button:hover {
 .main-image1 {
     background-image: url(./pictures/rodolfo-marques-VXdFTakRmDI-unsplash.jpg);
     background-size: cover;
+    
 }
 .main-image2 {
     background-image: url(/pictures/jasmine-huang-RSQmXaCUvn0-unsplash.jpg);
     background-size: cover;
+    
 }
 .main-image3 {
     background-image: url(/pictures/lidiya-pavlikova-y_gKWLrw3N4-unsplash.jpg);
     background-size: cover;
+    
 }
 .main-image4 {
     background-image: url(./pictures/sebastian-coman-photography-QcerUj-jYig-unsplash.jpg);
     background-size: cover;
+    
 }
 
 .main-header-logo{
@@ -240,7 +247,8 @@ button:hover {
     }
     .container {
         width: 100%;
-    }
+    } 
+
 }
 
 @media (min-width: 800px) {
@@ -252,8 +260,8 @@ button:hover {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 50px 350px 350px 50px;
         gap: 1rem;
-        padding-left: 150px;
-        padding-right: 150px;
+        padding-left: 200px;
+        padding-right: 200px;
     }
 
     .main-image1, .main-image2, .main-image3, .main-image4{
