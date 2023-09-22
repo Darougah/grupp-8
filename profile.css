@@ -4,9 +4,10 @@
   display: flex;
   margin: auto;
   margin-top: 40px;
-  width: 80%;
+  width: 50%;
   border: solid lightgray 2px;
   padding: 2rem;
+  
 }
 
 .formplace label {

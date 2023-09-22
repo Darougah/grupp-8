@@ -71,8 +71,12 @@ h3 {
     font-family: raleway;
     font-weight: bold;
     padding: 10px;
+
 }
 
+h2,h4{
+    display: none;
+}
 /* bottom nav mobile*/
 
 .bottom-nav {
